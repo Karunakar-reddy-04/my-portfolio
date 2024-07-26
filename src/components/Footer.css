@@ -1,0 +1,175 @@
+/* Container for the footer section */
+.Footer-section {
+    padding: 2rem;
+    width: 100%;
+    opacity: 0.9;
+  background-color: black;
+    margin: 1rem auto 0;
+    box-shadow: 0 4px 8px rgba(120, 120, 120, 0.1);
+    text-align: center; /* Center align text */
+}
+
+
+/* Container for social media icons */
+.Footer-social {
+    display: flex;
+    gap: 2rem; /* Space between icons */
+    justify-content: center; /* Center icons horizontally */
+    margin-bottom: 1.5rem;
+    padding-top: 20px;
+}
+
+/* Styling for individual social media icon links */
+.Footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden;
+    position: relative; /* For positioning the border */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and box-shadow */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+
+/* Styling for social media icon images */
+.Footer-icon img {
+    width: 100%; /* Ensure image fills the circle */
+    height: 100%; /* Ensure image fills the circle */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.Footer-icon.github:hover {
+    box-shadow: 0 0 15px 15px #000000; /* Glow effect with GitHub color */
+}
+
+.Footer-icon.linkedin:hover {
+    box-shadow: 0 0 15px 15px #0077b5; /* Glow effect with LinkedIn color */
+}
+
+.Footer-icon.instagram:hover {
+    box-shadow: 0 0 15px 15px #e4405f; /* Glow effect with Instagram color */
+}
+
+.Footer-icon.gmail:hover {
+    box-shadow: 0 0 15px 15px #d93025; /* Glow effect with Gmail color */
+}
+
+.Footer-icon.mobile:hover {
+    box-shadow: 0 0 15px 15px #4caf50; /* Glow effect with Mobile color */
+}
+
+/* Styling for rights reserved text */
+.Footer-rights {
+    font-size: 0.875rem;
+    color: #ffffff;
+    margin-top: 1.5rem; /* Space above the text */
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    .Footer-title {
+        font-size: 1.5rem; /* Adjust font size for the title */
+    }
+
+    .Footer-social {
+        gap: 1rem; /* Reduce gap between icons */
+    }
+
+    .Footer-icon {
+        width: 40px; /* Smaller icon size */
+        height: 40px;
+    }
+}
+
+/* For very small devices (mobile phones) */
+@media (max-width: 480px) {
+    .Footer-title {
+        font-size: 1.25rem; /* Further reduce font size */
+    }
+
+    .Footer-social {
+        flex-direction: row; /* Stack icons vertically */
+        gap: 0.5rem; /* Reduce gap between icons */
+        align-items: center;
+    }
+
+    .Footer-icon {
+        width: 35px; /* Smaller icon size */
+        height: 35px;
+    }
+
+    .Footer-rights {
+        font-size: 0.75rem; /* Adjust font size for rights text */
+    }
+}
+
+/* For very small devices (mobile phones) */
+@media (max-width: 480px) {
+    .Skills-section {
+        padding: 1rem; /* Reduce padding for very small screens */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 3rem; /* Reduce bottom margin for small screens */
+    }
+
+    .Vertical-line {
+        left: 1rem; /* Reduce space from the left edge */
+    }
+
+    .Dot {
+        width: 8px; /* Smaller dot size */
+        height: 8px;
+    }
+
+    .Category-name {
+        font-size: 0.8rem; /* Smaller font size for category names */
+        left: calc(50% + 0.5rem); /* Adjust space from the dot */
+    }
+
+    .Skills-content {
+        margin-left: 0; /* Remove margin for mobile */
+        width: 100%; /* Full width on mobile */
+    }
+
+    .Stage {
+        flex-direction: column; /* Stack dot and content vertically */
+        align-items: center; /* Center align items */
+        gap: 0.5rem; /* Reduced space between dot and content */
+        margin-bottom: 1.5rem; /* Reduce bottom margin */
+    }
+
+    .Stage-title {
+        font-size: 1rem; /* Smaller font size for stage titles */
+        margin-bottom: 0.5rem; /* Reduced bottom margin */
+    }
+
+    .Skills-container {
+        gap: 0.5rem; /* Reduced space between skill items */
+    }
+
+    .Skill {
+        width: 35px; /* Adjust size for very small screens */
+        height: 35px;
+    }
+
+    .Skill-logo {
+        width: 70%; /* Adjust logo size */
+        height: 70%;
+    }
+
+    .Skill-tooltip {
+        font-size: 0.7rem; /* Smaller font size for tooltips */
+        top: -1.5rem; /* Adjust position */
+    }
+
+    .End-emoji {
+        width: 50px; /* Smaller size for the end emoji */
+        height: 50px;
+        left: -1rem; /* Adjust space from the left */
+        bottom: -1.5rem; /* Position adjustment */
+    }
+}

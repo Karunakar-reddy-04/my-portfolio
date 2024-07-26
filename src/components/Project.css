@@ -1,0 +1,129 @@
+/* Container for the projects section */
+.Projects-section {
+    padding: 2rem;
+    width: 100%;
+    opacity: 0.9;
+    background-color: black;
+    margin: 1rem auto 1rem;
+    box-shadow: 0 4px 8px rgba(120, 120, 120, 0.1);
+    position: relative; /* Ensure the section is positioned correctly */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+
+/* Title of the projects section */
+.Projects-title {
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.9;
+    font-weight: bold;
+    margin: 2rem; /* Add space around the title */
+    text-align: center;
+}
+
+/* Container for project cards */
+/* Container for project cards */
+.Projects-container {
+    display: flex;
+    justify-content: center; /* Center the project cards */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    padding: 20px;
+    gap: 1rem; /* Space between cards */
+}
+
+/* Individual project card */
+.Project-card {
+    flex: 1; /* Allows the card to take up equal space */
+    max-width: 350px; /* Set maximum width */
+    min-width: 250px; /* Set minimum width */
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px orange;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Project image */
+.Project-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Project title */
+.Project-title {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* Project description */
+.Project-description {
+    font-size: 0.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* Project button */
+.Project-button {
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid black;
+}
+
+.Project-button:hover {
+    background-color: orange;
+    box-shadow: 0 0 10px 10px orange;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+    .Projects-container {
+        flex-direction: column; /* Stack project cards vertically */
+        align-items: center; /* Center align project cards */
+    }
+
+    .Project-card {
+        max-width: 90%; /* Adjust width to fit the screen */
+        margin: 1rem 0; /* Adjust margin for vertical stacking */
+    }
+}
+
+/* For very small devices (mobile phones) */
+@media (max-width: 480px) {
+    .Project-image {
+        width: 60px; /* Adjust image size */
+        height: 60px;
+    }
+
+    .Project-title {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .Project-description {
+        font-size: 0.75rem; /* Adjust font size */
+    }
+
+    .Project-button {
+        font-size: 0.7rem; /* Adjust button font size */
+        padding: 0.5rem 0.7rem; /* Adjust button padding */
+    }
+}

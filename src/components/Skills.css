@@ -1,0 +1,184 @@
+/* Container for all skills */
+.Skills-section {
+    padding: 2rem;
+    background-color: black;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    position: relative; /* For positioning the vertical line */
+    margin-left: 8rem; /* Space from the left edge */
+    margin-bottom: 6rem;
+}
+
+/* Vertical Line */
+.Vertical-line {
+    position: absolute;
+    left: 2rem; /* Space from the left edge */
+    width: 2px;
+    height: 100%;
+    margin-top: 6rem;
+    background-color: rgba(255, 105, 0, 0.8);
+    z-index: 0;
+}
+
+/* Glowing dots */
+.Dot {
+    width: 15px;
+    height: 15px;
+    background-color: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 10px orange;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Category names next to dots */
+.Category-name {
+    position: absolute;
+    left: calc(50% + 1rem); /* Space from the dot */
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+}
+
+/* Content wrapper */
+.Skills-content {
+    margin-left: 4rem; /* Space for vertical line and category names */
+    width: calc(100% - 6rem); /* Adjust width to account for vertical line and category names */
+    position: relative; /* For positioning over the vertical line */
+    z-index: 1; /* Ensure content is above the vertical line */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Each stage block */
+.Stage {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 1rem; /* Space between dot and content */
+    margin-bottom: 2.5rem;
+}
+
+/* Stage content */
+.Stage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Title for each stage */
+.Stage-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* Container for skills within a stage */
+.Skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between skill items */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+/* Individual skill */
+.Skill {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px orange;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Skill logo styling */
+.Skill-logo {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+/* Tooltip styling */
+.Skill-tooltip {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* End emoji styling */
+.End-emoji {
+    position: absolute;
+    left: -1.5rem; /* Adjust space from the left as needed */
+    bottom: -2rem; /* Position it at the end of the vertical line */
+    width: 60px; /* Match the size of other logos */
+    height: 60px; /* Match the size of other logos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; /* Ensure it is above the line */
+}
+
+
+
+/* Tooltip visibility on hover */
+.Skill:hover .Skill-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hover effect for skill logos */
+.Skill:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 15px 8px orange; /* Intense glow with orange color */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .Skills-section {
+        margin-left: 1rem; /* Reduce margin on mobile */
+    }
+
+    .Skills-content {
+        margin-left: 0; /* Remove left margin on mobile */
+        width: 100%; /* Full width on mobile */
+    }
+
+    .Stage {
+        flex-direction: column; /* Stack dot and content vertically on mobile */
+        align-items: center; /* Center align items */
+        gap: 1rem; /* Space between dot and content */
+    }
+
+    .Dot {
+        width: 10px; /* Smaller dot size on mobile */
+        height: 10px;
+    }
+
+    .Skill {
+        width: 40px; /* Adjust size for mobile screens */
+        height: 40px;
+    }
+}

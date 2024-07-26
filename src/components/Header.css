@@ -1,0 +1,94 @@
+.Header {
+  color: white;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box; /* Ensure padding and borders are included in the total width */
+  width: 100%; /* Ensure header width is 100% of the viewport */
+  overflow-x: hidden; /* Hide any overflow to avoid horizontal scroll */
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+}
+
+
+
+.menu-toggle {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000; /* Make sure it’s above other content */
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  max-width: 100%; /* Prevents the navbar from exceeding the header width */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  display: block; /* Ensure links fill their parent */
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a:hover {
+  box-shadow: 0 0 15px 5px orange;
+  
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 40px;
+  }
+
+  .navbar {
+    display: none; /* Hide navbar by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    padding: 1rem;
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  .navbar.open {
+    display: flex; /* Show navbar when menu is open */
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .nav-list a {
+    padding: 1rem;
+    text-align: center;
+  }
+}

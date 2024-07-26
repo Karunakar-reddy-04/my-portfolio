@@ -1,0 +1,122 @@
+.Home {
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  padding: 2rem; /* Padding inside the home section */
+  gap: 8rem; /* Space between the left and right content */
+  width: 100%;
+  background-color:black;
+  margin: 2.5rem auto 0; 
+  height: 400px;
+  opacity: 0.9;
+  
+}
+
+.Home-left {
+  flex: 1; /* Allows the left section to take up space */
+  display: flex; /* Use Flexbox for centering the profile picture */
+  justify-content: center; /* Center horizontally */
+}
+
+.Home-right {
+  flex: 2; /* Allows the right section to take up more space */
+}
+
+.Home-right h1,
+.Home-right h2,
+.Home-right p {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  opacity: 0.9;
+}
+
+.Home-right h1 {
+  font-size: 2rem; /* Font size for h1 */
+  margin-bottom: 0.5rem; /* Space below h1 */
+  color: #fff;
+  opacity: 0.9;
+}
+
+.Home-right h2 {
+  font-size: 1.5rem; /* Font size for h2 */
+  margin-bottom: 1rem; /* Space below h2 */
+  color: #fff;
+  opacity: 0.9;
+}
+
+.Home-right p {
+  font-size: 1rem; /* Font size for p */
+  line-height: 1.5; /* Line height for readability */
+  color: #fff;
+  opacity: 0.9;
+  width: 80%;
+}
+
+.profile-pic {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: box-shadow 0.3s ease;
+  border: 2px solid gray;
+  box-shadow: 0 0 15px 0 gray;
+}
+
+.profile-pic:hover {
+  box-shadow: 0 0 20px 2px orange; /* Adds a shadow around the image */
+  cursor: pointer;
+}
+
+.resume-button {
+  margin-top: 2rem; /* Space above the button */
+  padding: 0.5rem 1rem; /* Padding inside the button */
+  font-size: 1.15rem; /* Font size for the button */
+  font-weight: bold;
+  color: black; /* Text color */
+  background-color: orange; /* Button background color */
+  border: 1px solid black; /* Button border */
+  border-radius: 30px; /* Circular border radius */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+  height: 40px;
+  width: 120px;
+}
+
+.resume-button:hover {
+  box-shadow: 0 0 10px 5px orange; /* Circular box-shadow effect */
+}
+
+.resume-button:active {
+  background-color: darkorange; /* Darker background on click */
+  border: 1px solid #444; /* Darker border on click */
+}
+
+.resume-button:focus {
+  outline: 2px solid orange; /* Outline for accessibility focus */
+  outline-offset: 2px;
+}
+
+
+@media (max-width: 768px) {
+  .Home {
+    flex-direction: column; /* Stack left and right sections vertically */
+    gap: 2rem; /* Reduce gap for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .Home-left,
+  .Home-right {
+    flex: 1; /* Allow both sections to take up equal space */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .profile-pic {
+    width: 200px; /* Adjust profile picture size for smaller screens */
+    height: 200px;
+  }
+
+  .Home-right p {
+    width: 100%; /* Ensure text takes full width */
+    font-size: 0.9rem; /* Adjust font size for readability on smaller screens */
+  }
+}

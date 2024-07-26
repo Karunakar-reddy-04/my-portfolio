@@ -1,0 +1,155 @@
+/* Container for the entire Education section */
+.Education-section {
+    padding: 2rem;
+    width: 100%;
+    margin: 1rem auto 1rem; 
+}
+
+/* Title of the education section */
+.Education-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    opacity: 0.9;
+    font-weight: bold;
+    margin-bottom: 2rem; /* Space below the title */
+    text-align: center; /* Center title text */
+    width: 100%; /* Ensure title spans full width of section */
+    opacity: 0.9;
+}
+
+/* Container for each education item */
+.Education-container {
+    display: block;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    width: 100%;
+}
+
+/* Each education item container */
+.Education-item {
+    display: flex;
+    flex-direction: row; /* Align logo and details horizontally */
+    align-items: center;
+    background-color: black;
+    border-radius: 1%;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px; /* Max width for each item */
+    margin: 2rem; /* Margin around items */
+}
+
+/* University logo styling */
+.University-logo {
+    width: 110px; /* Adjust the size as needed */
+    height: 110px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensure the image covers the container */
+    overflow: hidden; /* Hide overflow to keep the circular shape */
+    margin-right: 3rem; /* Space between logo and details */
+}
+
+/* Details of the education item */
+.Education-details {
+    color: #ffffff;
+    flex: 1; /* Allow details to take up available space */
+    opacity: 0.9;
+}
+
+/* Title styling for each education item */
+.Education-details h2 {
+    font-size: 1.2rem;
+    margin: 0; /* Remove default margin */
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* Additional styling for subheadings */
+.Education-details h5 {
+    color: #cccccc;
+    opacity: 0.9;
+    margin: 0.5rem 0; /* Space above and below */
+}
+
+/* Paragraph styling for education details */
+.Education-details p {
+    font-size: 1rem;
+    margin: 0.25rem 0; /* Space between lines */
+}
+
+
+/* Media Queries */
+
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+    .Education-section {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+    
+    .Education-title {
+        font-size: 1.5rem; /* Adjust font size for the title */
+        margin-bottom: 1rem; /* Reduce space below the title */
+    }
+    
+    .Education-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    
+    .Education-item {
+        width: calc(100% - 2rem); /* Adjust width to fit within the viewport */
+        max-width: none; /* Remove max-width restriction */
+        margin: 0.5rem 0; /* Reduce margin for mobile screens */
+        padding: 1rem; /* Adjust padding */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adjust shadow for smaller screens */
+        flex-direction: column; /* Stack image and details vertically */
+        align-items: center; /* Center align items */
+        box-sizing: border-box; /* Ensure padding and border are included in width */
+    }
+    
+    .University-logo {
+        width: 100px; /* Adjust logo size */
+        height: 100px;
+        margin-right: 0; /* Remove margin for vertical stacking */
+        margin-bottom: 1rem; /* Add space below logo */
+    }
+    
+    .Education-details {
+        text-align: center; /* Center align text */
+    }
+    
+    .Education-details h2 {
+        font-size: 1rem; /* Adjust font size for headings */
+    }
+    
+    .Education-details h5 {
+        font-size: 0.875rem; /* Adjust font size for sub-headings */
+    }
+    
+    .Education-details p {
+        font-size: 0.875rem; /* Adjust font size for paragraphs */
+    }
+}
+
+/* For very small devices (mobile phones) */
+@media (max-width: 480px) {
+    .Education-item {
+        padding: 0.5rem; /* Reduce padding for very small screens */
+        width: calc(100% - 1rem); /* Further adjust width */
+    }
+
+    .University-logo {
+        width: 80px; /* Smaller image size */
+        height: 80px;
+    }
+
+    .Education-details h2 {
+        font-size: 0.875rem; /* Adjust font size for headings */
+    }
+
+    .Education-details h5 {
+        font-size: 0.75rem; /* Adjust font size for sub-headings */
+    }
+
+    .Education-details p {
+        font-size: 0.75rem; /* Adjust font size for paragraphs */
+    }
+}
